@@ -1,0 +1,77 @@
+openapi: 3.0.0
+info:
+  title: Tenant Posted Jobs Details and Tenant Posted Jobs Count Request API
+  version: 1.0.0
+  description: This is the OpenAPI specification for Tenant Posted Jobs Details and Tenant Posted Jobs Count.
+servers:
+  - url: 'https://api-simulation.bricksandagent.com'
+paths:
+  '/api/Alex/tenant-posted-jobs/{organizationId}':
+    get:
+      summary: Get tenant posted jobs
+      operationId: getTanantPostedJobs
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: Successful retrieval of tenant posted jobs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    jobNumber:
+                      type: string
+                    title: 
+                      type: string
+                    jobType: 
+                      type: string
+                    address: 
+                      type: string
+                    createdDate: 
+                      type: string
+                    dueDate: 
+                      type: string
+                    propertyManagerName: 
+                      type: string
+        '401':
+          description: Unauthorized 
+        '404':
+          description: Not Found
+        '500':
+          description: Server error. 
+  '/api/Alex/tenant-posted-jobs-count/{organizationId}':
+    get:
+      summary: Get Tenant Posted Jobs Count
+      description: Retrieve the count of tenant posted jobs
+      operationId: getTenantPostedJobsCount
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: The count of tenant posted jobs.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobCount:
+                    type: integer
+        '401':
+          description: Unauthorized 
+        '404':
+          description: Not Found
+        '500':
+          description: Server error.

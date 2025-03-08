@@ -1,0 +1,42 @@
+{
+  "name": "2664638b-79d8-49fc-b962-fcae2045e08c",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Hi there! I'm Alex, the AI assistant for Bricks \u0026 Agent. How can I help you today?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Can I get details about a job"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "Data Playbook",
+      "playbookInput": {
+        "precedingConversationSummary": "Ask data",
+        "actionParameters": {
+        
+        }
+      },
+      "playbookOutput": {
+        "executionSummary": "Ok",
+        "actionParameters": {
+        
+        }
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "agentUtterance": {
+    
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "Hi"
+  },
+  "playbookOutput": {
+    "executionSummary": "Thanks for using Alex, Have a greate day!"
+  },
+  "displayName": "Default flow",
+  "retrievalStrategy": "DEFAULT",
+  "languageCode": "en"
+}

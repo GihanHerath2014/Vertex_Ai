@@ -1,0 +1,26 @@
+{
+  "name": "a47225db-ffe8-47a0-a699-45fe9d1612be",
+  "displayName": "BnA-docs",
+  "dataStoreSpec": {
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/230892428541/locations/global/collections/default_collection/dataStores/alex-data-store_id",
+      "documentProcessingMode": "DOCUMENTS"
+    } ],
+    "models": {
+      "summarizationModel": {
+        "model": "gemini_pro"
+      }
+    },
+    "fallbackPrompt": {
+    
+    },
+    "groundingSettings": {
+    
+    },
+    "payloadSettings": {
+    
+    }
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

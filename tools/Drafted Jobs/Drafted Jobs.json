@@ -1,0 +1,16 @@
+{
+  "name": "b989c17c-6110-4e5b-a037-3eaced73f2ee",
+  "displayName": "Drafted Jobs",
+  "description": "OpenAPI specification for drafted jobs and count.",
+  "openApiSpec": {
+    "authentication": {
+      "apiKeyConfig": {
+        "keyName": "x-api-key",
+        "apiKey": "BA393FB9E8FB2B7237C6B2F97DE72",
+        "requestLocation": "HEADER"
+      }
+    },
+    "ignoreUnknownFields": true
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

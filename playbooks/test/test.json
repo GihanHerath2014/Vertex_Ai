@@ -1,0 +1,17 @@
+{
+  "name": "15fe9366-bedc-47b2-9f09-cda8a6ba1349",
+  "displayName": "test",
+  "goal": "Help users",
+  "tokenCount": 57,
+  "referencedTools": [ "weather" ],
+  "instruction": {
+    "steps": [ {
+      "text": "Ask  the  about weather use ${TOOL:weather}"
+    }, {
+      "text": "Thank  the  user"
+    } ]
+  },
+  "codeBlock": {
+  
+  }
+}

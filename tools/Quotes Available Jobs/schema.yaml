@@ -1,0 +1,77 @@
+openapi: 3.0.0
+info:
+  title: Quotes Available Jobs Details and Quotes Available Jobs Count Request API
+  version: 1.0.0
+  description: This is the OpenAPI specification for quotes available jobs and quotes available jobs count.
+servers:
+  - url: 'https://api-simulation.bricksandagent.com'
+paths:
+  '/api/Alex/quotes-available-jobs/{organizationId}':
+    get:
+      summary: Get quotes available jobs
+      operationId: getQuotesAvailableJobs
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+            type: string
+            x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: Successful retrieval of quotes available jobs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    jobNumber:
+                      type: string
+                    title:
+                      type: string
+                    jobType:
+                      type: string
+                    address:
+                      type: string
+                    createdDate:
+                      type: string
+                    dueDate:
+                      type: string
+                    propertyManagerName:
+                      type: string
+        '401':
+          description: Unauthorized 
+        '404':
+          description: Not Found
+        '500':
+          description: Server error.
+  '/api/Alex/quotes-available-jobs-count/{organizationId}':
+    get:
+      summary: Get Quotes Available Jobs Count
+      description: Retrieve the count of quotes available jobs
+      operationId: getQuotesAvailableJobsCount
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+            type: string
+            x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: The count of Quotes available jobs.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobCount:
+                    type: integer
+        '401':
+          description: Unauthorized 
+        '404':
+          description: Not Found
+        '500':
+          description: Server error.

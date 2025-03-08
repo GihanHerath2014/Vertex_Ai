@@ -1,0 +1,74 @@
+openapi: 3.0.0
+info:
+  title: Overdue Jobs 
+  version: 1.0.0
+  description: This is the OpenAPI specification for overdue jobs 
+servers:
+  - url: 'https://api-simulation.bricksandagent.com'
+paths:
+  '/api/alex/overdue-jobs-count/{organizationId}':
+    get:
+      summary: Get Overdue Jobs Count
+      description: Retrieve the count of overdue jobs for a given user.
+      operationId: getOverdueJobsCount
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: The count of overdue jobs.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobCount:
+                    type: integer
+        '404':
+          description: User not found.
+        '500':
+          description: Server error
+  '/api/alex/overdue-jobs/{organizationId}':
+    get:
+      summary: Get Overdue Jobs
+      description: Retrieve the overdue job list.
+      operationId: getOverdueJobs
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: The list of overdue jobs.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    jobNumber:
+                      type: string
+                    title:
+                      type: string
+                    jobType:
+                      type: string
+                    address:
+                      type: string
+                    createdDate:
+                      type: string
+                    dueDate:
+                      type: string
+                    propertyManagerName:
+                      type: string
+        '404':
+          description: User not found.
+        '500':
+          description: Server error.

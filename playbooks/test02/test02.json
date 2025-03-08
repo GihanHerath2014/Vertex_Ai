@@ -1,0 +1,17 @@
+{
+  "name": "4bbbfdb3-3013-49e7-abff-9fea624acfe5",
+  "displayName": "test02",
+  "goal": "Help users",
+  "tokenCount": 95,
+  "referencedTools": [ "addRichContent" ],
+  "instruction": {
+    "steps": [ {
+      "text": "Ask  the  user  what  their  favorite  color  is. At  the  same  time  run  ${TOOL:addRichContent}  to  display  buttons for  blue,  red,  yellow,  and  green."
+    }, {
+      "text": "Thank  the  user"
+    } ]
+  },
+  "codeBlock": {
+  
+  }
+}

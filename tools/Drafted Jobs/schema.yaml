@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  title: Drafted Jobs Count Request API
+  version: 1.0.0
+  description: This is the OpenAPI specification for drafted jobs and count.
+servers:
+  - url: 'https://api-simulation.bricksandagent.com'
+paths:
+  '/api/Alex/drafted-jobs/{organizationId}':
+    get:
+      summary: Get drafted jobs
+      operationId: getDraftedJobs
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: Successful retrieval of drafted jobs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    jobNumber:
+                      type: string
+                    title:
+                      type: string
+                    jobType:
+                      type: string
+                    address:
+                      type: string
+                    createdDate:
+                      type: string
+                    dueDate:
+                      type: string
+                    propertyManagerName:
+                      type: string
+        '401':
+          description: Unauthorized - API key is invalid or missing
+        '404':
+          description: Not Found
+  '/api/Alex/drafted-jobs-count/{organizationId}':
+    get:
+      summary: Get Drafted Jobs Count
+      description: Retrieve the count of drafted jobs
+      operationId: getDraftedJobsCount
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: The count of drafted jobs.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobCount:
+                    type: integer
+        '404':
+          description: User not found.
+        '500':
+          description: Server error.

@@ -1,0 +1,79 @@
+openapi: 3.0.0
+info:
+  title: Invoice Review Jobs Details and Invoice Review Jobs Count API
+  version: 1.0.0
+  description: This is the OpenAPI specification for  Invoice Review Jobs Details and Invoice Review Jobs Count.
+servers:
+  - url: 'https://api-simulation.bricksandagent.com'
+paths:
+  '/api/Alex/invoice-review-jobs/{organizationId}':
+    get:
+      summary: Get invoice review jobs details
+      operationId: getInvoiceReviewJobs
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: Successful retrieval of invoice review jobs details
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    jobNumber:
+                      type: string
+                    title:
+                      type: string
+                    jobType:
+                      type: string
+                    address:
+                      type: string
+                    createdDate:
+                      type: string
+                    dueDate:
+                      type: string
+                    propertyManagerName:
+                      type: string
+                    invoiceAmount:
+                      type: string
+        '401':
+          description: Unauthorized 
+        '404':
+          description: Not Found
+        '500':
+          description: Server error. 
+  '/api/Alex/invoice-review-jobs-count/{organizationId}':
+    get:
+      summary: Get Invoice Review Jobs Count
+      description: Retrieve the count of invoice review jobs 
+      operationId: getInvoiceReviewJobsCount
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: The count of invoice review jobs.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobCount:
+                    type: integer
+        '401':
+          description: Unauthorized 
+        '404':
+          description: Not found.
+        '500':
+          description: Server error.

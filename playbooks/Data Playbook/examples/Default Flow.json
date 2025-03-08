@@ -1,0 +1,328 @@
+{
+  "name": "4c23589d-58a2-40fe-8d1c-dacedf962936",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Show me variation requested jobs count"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Variation Requested Jobs",
+      "action": "getVariationRequestedJobsCount",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": {
+          "jobCount": 2
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "There are currently 2 variation requested jobs. Do you want to see the details?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Yes. Give me the details"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Variation Requested Jobs",
+      "action": "getVariationReqJobs",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": [ {
+          "address": "Kingsford NSW, Australia",
+          "createdDate": "2024-03-11T12:19:51.0089848",
+          "dueDate": "2024-03-18T00:00:00",
+          "invoiceAmount": "0.00",
+          "jobNumber": "240301922",
+          "jobType": "Electrician",
+          "propertyManagerName": "Strata PM Simulation",
+          "title": "dddd"
+        }, {
+          "address": "Kingsford NSW, Australia",
+          "createdDate": "2024-10-14T04:20:51.1513635",
+          "dueDate": "2024-10-21T00:00:00",
+          "invoiceAmount": "0.00",
+          "jobNumber": "2410001083",
+          "jobType": "Handyman",
+          "propertyManagerName": "Strata PM Simulation",
+          "title": "test vari strata"
+        } ]
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Here are the details of the 2 variation requested jobs:\n\n - **Job Number**: 240301922\n    - **Title**: dddd\n    - **Job Type**: Electrician\n    - **Address**: Kingsford NSW, Australia\n    - **Created On**: 2024-03-11\n    - **Due Date**: 2024-03-18\n    - **Property Manager**: Strata PM Simulation\n\n\n - **Job Number**: 2410001083\n    - **Title**: test vari strata\n    - **Job Type**: Handyman\n    - **Address**: Kingsford NSW, Australia\n    - **Created On**: 2024-10-14\n    - **Due Date**: 2024-10-21\n    - **Property Manager**: Strata PM Simulation"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Show it as a table"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Here are the details of the 2 variation requested jobs in a table format:\n\n| Job Number | Title | Job Type | Address | Created On | Due Date | Property Manager | Invoice Amount |\n|---|---|---|---|---|---|---|---|\n| 240301922 | dddd | Electrician | Kingsford NSW, Australia | 2024-03-11 | 2024-03-18| Strata PM Simulation | 0.00 |\n| 2410001083 | test vari strata | Handyman | Kingsford NSW, Australia | 2024-10-14 | 2024-10-21 | Strata PM Simulation | 0.00 |"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I need to know what percentage of Invoice Review Jobs compared to Overdue Jobs"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Invoice Review Jobs",
+      "action": "getInvoiceReviewJobs",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": [ {
+          "address": "NSW Coastline Cycleway, Bulli NSW, Australia",
+          "createdDate": "2023-08-03T08:16:56.3344133",
+          "dueDate": "2023-08-10T00:00:00",
+          "invoiceAmount": "0.00",
+          "jobNumber": "230800819",
+          "jobType": "Electrician",
+          "propertyManagerName": "Strata PM Simulation",
+          "title": "Warranty Job "
+        }, {
+          "address": "Kingsford NSW, Australia",
+          "createdDate": "2023-10-03T09:53:57.6195262",
+          "dueDate": "2023-10-10T00:00:00",
+          "invoiceAmount": "123.22",
+          "jobNumber": "231000458",
+          "jobType": "Electrician",
+          "propertyManagerName": "Strata PM Simulation",
+          "title": "bbbb"
+        }, {
+          "address": "Kingsford NSW, Australia",
+          "createdDate": "2024-05-16T10:34:35.5029211",
+          "dueDate": "2024-05-23T00:00:00",
+          "invoiceAmount": "201.69",
+          "jobNumber": "240501546",
+          "jobType": "Garages",
+          "propertyManagerName": "Strata PM Simulation",
+          "title": "Garage remotes are not working"
+        } ]
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "There are currently 3 invoice review jobs:\n\n| Primary Service Type | Count |\n|----------------------|-------|\n| Electrician          | 2     |\n| Garages              | 1     |"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Give me the Job count summary of all the job types"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Quotes Available Jobs",
+      "action": "getQuotesAvailableJobsCount",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": {
+          "jobCount": 0
+        }
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "Tenant Posted Jobs",
+      "action": "getTenantPostedJobsCount",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": {
+          "jobCount": 1
+        }
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "Owner Rejected Jobs",
+      "action": "getOwnerRejectedJobsCount",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": {
+          "jobCount": 14
+        }
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "Variation Requested Jobs",
+      "action": "getVariationRequestedJobsCount",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": {
+          "jobCount": 2
+        }
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "Invoice Review Jobs",
+      "action": "getInvoiceReviewJobsCount",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": {
+          "jobCount": 3
+        }
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "Inspection Drafted Jobs",
+      "action": "getInspectionDraftedJobsCount",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": {
+          "jobCount": 0
+        }
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "Drafted Jobs",
+      "action": "getDraftedJobsCount",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": {
+          "jobCount": 0
+        }
+      }
+    }
+  }, {
+    "toolUse": {
+      "tool": "Trade Posted Jobs",
+      "action": "getTradePostedJobsCount",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": {
+          "jobCount": 1
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Here's the Job Count Summary of all the Job Types:\n\n| Job Type | Count |\n|---|---|\n| Drafted Jobs | 0 |\n| Inspection Drafted Jobs | 0 |\n| Owner Rejected Jobs | 14 |\n| Quotes Available Jobs | 0 |\n| Invoice Review Jobs | 3 |\n| Tenant Posted Jobs | 1 |\n| Trade Posted Jobs | 1 |\n| Variation Requested Jobs | 2 |\n| Overdue Jobs | 112 |"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Give the job count summary of all the job types as a bar chart"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Here's the job count summary of all the job types as a bar chart.\n\nJob Type                  | Count | Bar Chart                       | Percentage\n ------------------------- | ----- | ------------------------------- | ----------\n Drafted Jobs             |   0   |                                 |  0.0%\n Inspection Drafted Jobs  |   0   |                                 |  0.0%\n Owner Rejected Jobs      |  14   | ███████                           |  11.1%\n Quotes Available Jobs    |   0   |                                 |  0.0%\n Invoice Review Jobs      |   3   | ███                              |  2.4%\n Tenant Posted Jobs       |   1   | █                               |  0.8%\n Trade Posted Jobs        |   1   | █                               |  0.8%\n Variation Requested Jobs |   2   | ██                               |  1.6%\n Overdue Jobs             | 112   | ████████████████████████████████ | 88.3%\n\n"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Show me invoice review jobs details"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Invoice Review Jobs",
+      "action": "getInvoiceReviewJobs",
+      "inputActionParameters": {
+        "organizationId": "cb385ee2-8917-4ae0-83c1-08d85e1aec09"
+      },
+      "outputActionParameters": {
+        "200": [ {
+          "address": "NSW Coastline Cycleway, Bulli NSW, Australia",
+          "createdDate": "2023-08-03T08:16:56.3344133",
+          "dueDate": "2023-08-10T00:00:00",
+          "invoiceAmount": "0.00",
+          "jobNumber": "230800819",
+          "jobType": "Electrician",
+          "propertyManagerName": "Strata PM Simulation",
+          "title": "Warranty Job "
+        }, {
+          "address": "Kingsford NSW, Australia",
+          "createdDate": "2023-10-03T09:53:57.6195262",
+          "dueDate": "2023-10-10T00:00:00",
+          "invoiceAmount": "123.22",
+          "jobNumber": "231000458",
+          "jobType": "Electrician",
+          "propertyManagerName": "Strata PM Simulation",
+          "title": "bbbb"
+        }, {
+          "address": "Kingsford NSW, Australia",
+          "createdDate": "2024-05-16T10:34:35.5029211",
+          "dueDate": "2024-05-23T00:00:00",
+          "invoiceAmount": "201.69",
+          "jobNumber": "240501546",
+          "jobType": "Garages",
+          "propertyManagerName": "Strata PM Simulation",
+          "title": "Garage remotes are not working"
+        } ]
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Here are the details of the 3 Invoice Review Jobs:\n\n - **Job Number**: 230800819\n    - **Title**: Warranty Job\n    - **Job Type**: Electrician\n    - **Address**: NSW Coastline Cycleway, Bulli NSW, Australia\n    - **Created On**: 2023-08-03\n    - **Due Date**: 2023-08-10\n    - **Property Manager**: Strata PM Simulation\n    - **Invoice Amount**: $0.00\n\n\n - **Job Number**: 231000458\n    - **Title**: bbbb\n    - **Job Type**: Electrician\n    - **Address**: Kingsford NSW, Australia\n    - **Created On**: 2023-10-03\n    - **Due Date**: 2023-10-10\n    - **Property Manager**: Strata PM Simulation\n    - **Invoice Amount**: $123.22\n\n\n - **Job Number**: 240501546\n    - **Title**: Garage remotes are not working\n    - **Job Type**: Garages\n    - **Address**: Kingsford NSW, Australia\n    - **Created On**: 2024-05-16\n    - **Due Date**: 2024-05-23\n    - **Property Manager**: Strata PM Simulation\n    - **Invoice Amount**: $201.69"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Show me the job details of 2411000427"
+    }
+  }, {
+    "toolUse": {
+      "tool": "Job Details",
+      "action": "getJobDetails",
+      "inputActionParameters": {
+        "jobNumber": "2411000427",
+        "organizationId": "bd7090e8-592c-4b34-89e7-08d705c7241d"
+      },
+      "outputActionParameters": {
+        "200": {
+          "attachments": [ {
+            "extension": ".jpg",
+            "fileName": "Logo111.jpg",
+            "fileUrl": "https://ancillary-sim-images-compress.azureedge.net/da9a11e8-1e19-4d33-8905-28c3f3ded607.jpg",
+            "id": "da9a11e8-1e19-4d33-8905-28c3f3ded607"
+          }, {
+            "extension": ".mp4",
+            "fileName": "sample-5s.mp4",
+            "fileUrl": "https://ancillary-sim-streaming.azureedge.net/69e0f5c2-7e6a-4ab2-bb24-76d40524732d.mp4",
+            "id": "69e0f5c2-7e6a-4ab2-bb24-76d40524732d"
+          } ],
+          "completedOn": "2024-05-06",
+          "description": "Job Status Update\u0026nbsp;Job Status Update\u0026nbsp;Job Status Update\u0026nbsp;Job Status Update\u0026nbsp; \u003cb\u003e#Electric_gate\u003c/b\u003e \u003cb\u003e#Within_a_few_days\u003c/b\u003e",
+          "handlingPropertyManagerName": "PM Simulation",
+          "jobNumber": "2411000427",
+          "jobType": null,
+          "maintenanceType": "Paid",
+          "postedOn": "2024-11-25T08:45:03.4465622",
+          "serviceProviderName": null,
+          "status": "Awarded",
+          "title": "Job Status Update ",
+          "urgency": "Within a few days"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Here are the job details for Job Number 2411000427:\n\n- **Title**: Job Status Update\n- **Description**: Job Status Update Job Status Update Job Status Update Job Status Update  #Electric_gate #Within_a_few_days\n- **Urgency**: Within a few days\n- **Handling Property Manager**: PM Simulation\n- **Status**: Awarded\n- **Posted On**: 2024-11-25\n- **Maintenance Type**: Paid\n- **Attachments**:\n    -  ![](https://ancillary-sim-images-compress.azureedge.net/da9a11e8-1e19-4d33-8905-28c3f3ded607.jpg)\n    -  [Video](https://ancillary-sim-streaming.azureedge.net/69e0f5c2-7e6a-4ab2-bb24-76d40524732d.mp4)\n\nWhat else can I help you with?"
+    }
+  } ],
+  "displayName": "Default Flow",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

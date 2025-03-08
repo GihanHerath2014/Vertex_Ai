@@ -1,0 +1,16 @@
+{
+  "name": "b917a01c-05a9-41f2-ae6a-62b86c0ba99b",
+  "displayName": "Quotes Available Jobs",
+  "description": "OpenAPI specification for quotes available jobs details and quotes available jobs count.",
+  "openApiSpec": {
+    "authentication": {
+      "apiKeyConfig": {
+        "keyName": "x-api-key",
+        "apiKey": "BA393FB9E8FB2B7237C6B2F97DE72",
+        "requestLocation": "HEADER"
+      }
+    },
+    "ignoreUnknownFields": true
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

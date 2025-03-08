@@ -1,0 +1,61 @@
+{
+  "displayName": "Ask Alex",
+  "defaultLanguageCode": "en",
+  "timeZone": "Australia/Sydney",
+  "enableLogging": true,
+  "projectNumber": 230892428541,
+  "speechToTextSettings": {
+  
+  },
+  "enableStackdriverLogging": true,
+  "enableSpellCorrection": true,
+  "advancedSettings": {
+    "audioExportGcsDestination": {
+    
+    },
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    },
+    "playbackInterruptionSettings": {
+    
+    },
+    "loggingSettings": {
+      "enableStackdriverLogging": true,
+      "enableInteractionLogging": true
+    }
+  },
+  "speakerIdSettings": {
+  
+  },
+  "textToSpeechSettings": {
+  
+  },
+  "genAppBuilderSettings": {
+    "engine": "projects/230892428541/locations/global/collections/default_collection/engines/4495db1a-6972-4d5f-b627-d7c66f3d11cc"
+  },
+  "duplexSettings": {
+  
+  },
+  "callCompanionSettings": {
+    "company": "Alex"
+  },
+  "answerFeedbackSettings": {
+  
+  },
+  "startPlaybook": "test",
+  "webClientSettings": {
+    "displayName": "Alex",
+    "logoUri": "https://storage.cloud.google.com/alex_ai_bucket/Alex_AI/logo.svg",
+    "font": "Roboto",
+    "textColor": "#9C27B0",
+    "backgroundColor": "#FFFFFF",
+    "userInputColor": "#EEF7EE",
+    "agentResponseColor": "#2A56C6",
+    "userInputTextColor": "#000000",
+    "agentResponseTextColor": "#FFFFFF",
+    "boxBorderRadius": "10"
+  }
+}

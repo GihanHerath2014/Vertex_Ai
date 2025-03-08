@@ -1,0 +1,59 @@
+{
+  "name": "aaa5e7eb-41b8-4e9e-ab85-0517e3aa3266",
+  "actions": [ {
+    "toolUse": {
+      "tool": "addRichContent",
+      "action": "addRichContent",
+      "inputActionParameters": {
+        "functionParameter": {
+          "richContent": [ {
+            "html": "Hi there! What's your favorite color?",
+            "type": "html"
+          }, {
+            "options": [ {
+              "text": "🔴 red"
+            }, {
+              "text": "🔵 blue"
+            }, {
+              "text": "🟢 green"
+            }, {
+              "text": "🟡 yellow"
+            }, {
+              "text": "🟠 orange"
+            }, {
+              "text": "🟣 purple"
+            }, {
+              "text": "⚫ black"
+            } ]
+          } ]
+        }
+      },
+      "outputActionParameters": {
+        "functionParameter": {
+          "reason": "OK",
+          "status": ""
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Hi there! What's your favorite color?"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "test",
+    "actionParameters": {
+    
+    }
+  },
+  "playbookOutput": {
+    "executionSummary": "Agent and customer greet each other and the agent asks the customer's favorite color and display buttons.",
+    "actionParameters": {
+    
+    }
+  },
+  "displayName": "fav  color",
+  "tokenCount": 252,
+  "conversationState": "OUTPUT_STATE_PENDING",
+  "languageCode": "en"
+}

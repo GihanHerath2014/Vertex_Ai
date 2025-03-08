@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  title: Variation Requested API
+  version: 1.0.0
+  description: This is the OpenAPI specification for variation requested jobs and count.
+servers:
+  - url: 'https://api-simulation.bricksandagent.com'
+paths:
+  '/api/Alex/variation-req-jobs/{organizationId}':
+    get:
+      summary: Get variation requested jobs
+      operationId: getVariationReqJobs
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: Successful retrieval of variation requested jobs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    jobNumber:
+                      type: string
+                    title:
+                      type: string
+                    jobType:
+                      type: string
+                    address:
+                      type: string
+                    createdDate:
+                      type: string
+                    dueDate:
+                      type: string
+                    propertyManagerName:
+                      type: string
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+  '/api/Alex/variation-requested-jobs-count/{organizationId}':
+    get:
+      summary: Get variation requested jobs
+      description: Retrieve the count of variation requested jobs
+      operationId: getVariationRequestedJobsCount
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: The count of variation requested jobs
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobCount:
+                    type: integer
+        '404':
+          description: User not found.
+        '500':
+          description: Server error.

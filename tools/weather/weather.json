@@ -1,0 +1,29 @@
+{
+  "name": "64450e33-9663-4a92-ab88-391998e401e9",
+  "displayName": "weather",
+  "toolType": "CUSTOMIZED_TOOL",
+  "functionSpec": {
+    "inputSchema": {
+      "properties": {
+        "location": {
+          "description": "The city and state e.g. San Francisco, CA",
+          "type": "string"
+        },
+        "unit": {
+          "description": "The unit of the returned temperature.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "temperature": {
+          "description": "The temperature.",
+          "type": "number"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "0b8044ea-8de4-49ce-85b5-1ddab8df77c6",
+  "displayName": "Overdue Jobs",
+  "description": "OpenAPI specification for overdue jobs and count.",
+  "openApiSpec": {
+    "authentication": {
+      "apiKeyConfig": {
+        "keyName": "x-api-key",
+        "apiKey": "BA393FB9E8FB2B7237C6B2F97DE72",
+        "requestLocation": "HEADER"
+      }
+    },
+    "ignoreUnknownFields": true
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

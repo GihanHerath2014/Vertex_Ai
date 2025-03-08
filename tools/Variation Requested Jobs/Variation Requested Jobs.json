@@ -1,0 +1,16 @@
+{
+  "name": "d204099e-8f13-4e93-b20e-68e6a7fa99c4",
+  "displayName": "Variation Requested Jobs",
+  "description": "OpenAPI specification for variation request jobs and count.",
+  "openApiSpec": {
+    "authentication": {
+      "apiKeyConfig": {
+        "keyName": "x-api-key",
+        "apiKey": "BA393FB9E8FB2B7237C6B2F97DE72",
+        "requestLocation": "HEADER"
+      }
+    },
+    "ignoreUnknownFields": true
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

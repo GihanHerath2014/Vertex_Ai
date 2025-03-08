@@ -1,0 +1,16 @@
+{
+  "name": "cc12c8bb-88b6-4b5c-8c0f-cfb1f8ea284b",
+  "displayName": "Owner Rejected Jobs",
+  "description": "OpenAPI specification for owner rejected jobs and count.",
+  "openApiSpec": {
+    "authentication": {
+      "apiKeyConfig": {
+        "keyName": "x-api-key",
+        "apiKey": "BA393FB9E8FB2B7237C6B2F97DE72  ",
+        "requestLocation": "HEADER"
+      }
+    },
+    "ignoreUnknownFields": true
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

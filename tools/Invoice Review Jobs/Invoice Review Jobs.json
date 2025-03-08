@@ -1,0 +1,16 @@
+{
+  "name": "9bc96d22-b2ce-45a0-b777-4478b7f57823",
+  "displayName": "Invoice Review Jobs",
+  "description": "OpenAPI specification for Invoice Review Jobs Details and Invoice Review Jobs Count.",
+  "openApiSpec": {
+    "authentication": {
+      "apiKeyConfig": {
+        "keyName": "x-api-key",
+        "apiKey": "BA393FB9E8FB2B7237C6B2F97DE72",
+        "requestLocation": "HEADER"
+      }
+    },
+    "ignoreUnknownFields": true
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  title: Drafted Inspection Jobs and Count Request API
+  version: 1.0.0
+  description: This is the OpenAPI specification for inspection drafted jobs and count.
+servers:
+  - url: 'https://api-simulation.bricksandagent.com'
+paths:
+  '/api/Alex/inspection-drafted-jobs/{organizationId}':
+    get:
+      summary: Get inspection drafted jobs
+      operationId: getInspectionDraftedJobs
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: Successful retrieval of inspection drafted jobs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    jobNumber:
+                      type: string
+                    title: 
+                      type: string
+                    jobType: 
+                      type: string
+                    address: 
+                      type: string
+                    createdDate: 
+                      type: string
+                    dueDate: 
+                      type: string
+                    propertyManagerName: 
+                      type: string
+        '401':
+          description: Unauthorized 
+        '404':
+          description: Not Found
+  '/api/Alex/inspection-drafted-jobs-count/{organizationId}':
+    get:
+      summary: Get Inspection Drafted Jobs Count
+      description: Retrieve the count of inspection drafted jobs
+      operationId: getInspectionDraftedJobsCount
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: The count of inspection drafted jobs.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobCount:
+                    type: integer
+        '404':
+          description: User not found.
+        '500':
+          description: Server error.

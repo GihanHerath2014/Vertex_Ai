@@ -1,0 +1,16 @@
+{
+  "name": "9d9980c7-c325-4267-84a9-eb0bed4c4ca7",
+  "displayName": "Tenant Posted Jobs",
+  "description": "This OpenAPI specification for Tenant Posted Jobs Details and Tenant Posted Jobs Count .",
+  "openApiSpec": {
+    "authentication": {
+      "apiKeyConfig": {
+        "keyName": "x-api-key",
+        "apiKey": "BA393FB9E8FB2B7237C6B2F97DE72",
+        "requestLocation": "HEADER"
+      }
+    },
+    "ignoreUnknownFields": true
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

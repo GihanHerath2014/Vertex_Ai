@@ -1,0 +1,48 @@
+{
+  "name": "5e79cf0c-fa3f-4a64-903f-8f2256358da3",
+  "displayName": "addRichContent",
+  "toolType": "CUSTOMIZED_TOOL",
+  "functionSpec": {
+    "inputSchema": {
+      "properties": {
+        "richContent": {
+          "items": {
+            "properties": {
+              "html": {
+                "type": "string"
+              },
+              "options": {
+                "items": {
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "type": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "outputSchema": {
+      "properties": {
+        "reason": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "e7715c07-af8d-4bec-9971-48697481a3ed",
+  "displayName": "Job Details",
+  "description": "Provide details about a job.",
+  "openApiSpec": {
+    "authentication": {
+      "apiKeyConfig": {
+        "keyName": "x-api-key",
+        "apiKey": "BA393FB9E8FB2B7237C6B2F97DE72",
+        "requestLocation": "HEADER"
+      }
+    },
+    "ignoreUnknownFields": true
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

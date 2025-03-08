@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: Maintenance Request API
+  version: 1.0.0
+  description: This is the OpenAPI specification for jobs and Maintenance Request service.
+servers:
+  - url: 'https://api-simulation.bricksandagent.com'
+paths:
+  '/api/Alex/maintenance-request/{organizationId}/{jobNumber}':
+    get:
+      summary: Get job details by Job Number
+      operationId: getJobDetails
+      parameters:
+        - name: jobNumber
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+            type: string
+            x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: Successful request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobNumber:
+                    type: string
+                  title:
+                    type: string
+                  description:
+                    type: string
+                  primaryServiceType:
+                    type: string
+                  secondaryServiceType:
+                    type: string
+                  urgency:
+                    type: string
+                  handlingPropertyManagerName:
+                    type: string
+                  status:
+                    type: string
+                  postedOn:
+                    type: string
+                  completedOn:
+                    type: string
+                  maintenanceType:
+                    type: string
+                  attachments:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        fileUrl:
+                          type: string
+                  '401':
+                    description: Unauthorized - API key is invalid or missing
+                  '404':
+                    description: Not Found - Request ID does not exist

@@ -1,0 +1,16 @@
+{
+  "name": "fa29b1f2-45bc-403d-8d00-a0e52222dd22",
+  "displayName": "Trade Posted Jobs",
+  "description": "OpenAPI specification for trade posted jobs and  trade posted jobs count.",
+  "openApiSpec": {
+    "authentication": {
+      "apiKeyConfig": {
+        "keyName": "x-api-key",
+        "apiKey": "BA393FB9E8FB2B7237C6B2F97DE72",
+        "requestLocation": "HEADER"
+      }
+    },
+    "ignoreUnknownFields": true
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

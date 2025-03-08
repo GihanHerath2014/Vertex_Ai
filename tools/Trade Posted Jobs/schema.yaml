@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  title: Trade Posted Jobs list and Trade Posted Jobs Count Request API
+  version: 1.0.0
+  description: This is the OpenAPI specification for trade posted jobs and trade posted jobs count.
+servers:
+  - url: 'https://api-simulation.bricksandagent.com'
+paths:
+  '/api/Alex/trade-posted-jobs/{organizationId}':
+    get:
+      summary: Get trade posted jobs
+      operationId: getTradePostedJobs
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: Successful retrieval of trade posted jobs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    jobNumber:
+                      type: string
+                    title: 
+                      type: string
+                    jobType: 
+                      type: string
+                    address: 
+                      type: string
+                    createdDate: 
+                      type: string
+                    dueDate: 
+                      type: string
+                    propertyManagerName: 
+                      type: string
+        '401':
+          description: Unauthorized - API key is invalid or missing
+        '404':
+          description: Not Found - Organization ID does not exist
+  '/api/Alex/trade-posted-jobs-count/{organizationId}':
+    get:
+      summary: Get Trade Posted Jobs Count
+      description: Retrieve the count of trade posted jobs
+      operationId: getTradePostedJobsCount
+      parameters:
+        - name: organizationId
+          in: path
+          required: true
+          schema:
+           type: string
+           x-agent-input-parameter: organizationId
+      responses:
+        '200':
+          description: The count of trade posted jobs.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  jobCount:
+                    type: integer
+        '404':
+          description: User not found.
+        '500':
+          description: Server error.
